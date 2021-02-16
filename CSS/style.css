@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', 'serif';
+}
+/* header menu ___________________________________________ */
+header{
+    background: rgb(42, 43, 42);
+    color:white;
+}
+.menu .logo{
+    width:200px;
+    height:90px;
+    margin-left: 40px;
+}
+.menu{
+    display: flex; 
+    justify-content:space-between;  
+    align-items: center;
+    padding: 10px 0;
+}
+.decnone{
+    text-decoration: none;
+    color:white ;
+}
+.menu__nav ul{
+    margin: 0 10px;
+    list-style: none;
+}
+.menu__nav li{
+    display: inline-block;
+}
+.menu__nav a{
+    /* los enlaces se muestran como bloque para darles padding */
+    display: block;
+    padding: 2rem 2rem;
+    font-size: 1rem;
+    transition:all 0.4s linear; 
+}
+.menu__nav a:hover{
+    background: #ccc;
+    color:rgb(42, 43, 42);
+}
+/* cuerpo del sitio Home ___________________________________________ */
+.presentacion h1{
+    text-align: center;
+    font-size:60px;
+    margin:10px;
+}
+.tcentrado{
+    text-align: center;
+} 
+.presentacion p:first-of-type, p:nth-of-type(2){
+    margin:20px;
+}
+.imgcocina{
+    width: 100%;
+    height: 38rem;
+}
+.imgpagos{
+    display:block; 
+    margin:auto;
+    width: 90%;
+    height: 140px;
+}
+.enviobeneficios{
+    padding:60px;
+    display: flex;
+    justify-content:space-evenly;  
+}
+.enviobeneficios img{
+    width: 49%; 
+    height: 200px;
+}
+/* Footer ___________________________________________ */
+.footer{
+    background-color: rgb(42, 43, 42); 
+    width:100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    color:white; 
+    line-height:2rem;
+    
+}
+.footer__datos{
+    display: flex;
+    justify-content: center;
+}
+.footer__datos h2{
+    color:rgb(221, 115, 36);
+    margin-bottom:40px;
+}
+.columna1, .columna2,.columna3{
+    max-width: 33%;
+    padding: 50px;
+}
+.fila{
+    display: flex;
+}
+.fab, .fas{
+    font-size: 2rem;
+    color: rgb(196, 195, 193);
+}
+.fila p{
+    margin-top:10px;
+    margin-left:20px;
+}
+.footer__barra{
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+}
+.footer__barra a{
+    padding: 0 20px;
+}
+
+/* OTRA PÁGINA productos ___________________________________________ */
+
+.todosproductos h2{
+    font-size: 40px;
+    background-color: #2E294E;
+    background-image: linear-gradient(120deg, #2E294E 0%, #324376 50%);
+    /* background-color: #1c1c1c86; */
+    color:white;
+    padding: 30px;
+    font-weight:500;
+}
+.categorias{
+    width: 100%;
+    height: 140px;
+}
+.button{
+    border: none;
+    padding: 20px;
+    margin:20px;
+}
+.button--blue{
+    background-color: #243053fd;
+    color:white;
+    transition: all 1s ease-in-out;
+}
+.button--blue:hover{
+    width: 200px;
+    padding: 25px;
+    background:#2a2a2a;
+}
+.button--normal{
+    width: 150px;
+}
+.button--large{
+    width: 500px;
+    font-size: 16px;
+}
+.button--green{
+    color:white;
+    background: #222831;
+}
+.button--green:hover{
+    background: #30475e;
+}
+.button--click{
+    border-radius: 50px;
+}
+.card{
+    border:1px solid rgba(0,0,0,0.15); 
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 6px 8px rgb(0 0 0 / 20%);
+} */
+.card__title{
+    font-size: 25px;
+    margin:40px 0px 30px 0px;
+}
+.productos{
+    margin: 0px 80px 80px 80px;
+    display: grid;
+    grid-template-areas:    'producto1 producto2'
+                            'producto3 producto4'
+                            'producto5 producto5';
+    grid-gap: 40px;
+}
+.producto1{
+    grid-area: producto1;
+
+}
+.producto2{
+    grid-area: producto2;
+}
+.producto3{
+    grid-area: producto3;
+}
+.producto4{
+    grid-area: producto4;
+}
+.producto5{
+    grid-area: producto5;
+}
+.productos img{
+    width: 90%;
+    height: 400px;
+    padding: 40px;
+    border-bottom: 1px solid grey;
+}
