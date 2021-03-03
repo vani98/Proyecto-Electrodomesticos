@@ -9,9 +9,13 @@ header{
     background: rgb(42, 43, 42);
     color:white;
 }
+.hamburguesa{
+    display: none;
+}
 .menu .logo{
     width:200px;
     height:90px;
+    min-height: 70px;
     margin-left: 40px;
 }
 .menu{
@@ -56,13 +60,15 @@ header{
 }
 .imgcocina{
     width: 100%;
-    height: 38rem;
+    max-height: 38rem;
+    min-height: 20rem;
 }
 .imgpagos{
     display:block; 
     margin:auto;
     width: 90%;
-    height: 140px;
+    max-height: 140px;
+    min-height: 100px;
 }
 .enviobeneficios{
     padding:60px;
@@ -93,7 +99,7 @@ header{
     margin-bottom:40px;
 }
 .columna1, .columna2,.columna3{
-    max-width: 33%;
+    width: 33%;
     padding: 50px;
 }
 .fila{
@@ -130,7 +136,8 @@ header{
 }
 .categorias{
     width: 100%;
-    height: 140px;
+    min-height: 140px;
+    padding:30px;
 }
 .button{
     border: none;
@@ -140,18 +147,22 @@ header{
 .button--blue{
     background-color: #243053fd;
     color:white;
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in;
 }
 .button--blue:hover{
     width: 200px;
     padding: 25px;
     background:#2a2a2a;
+    transition: all 1s ease-in;
+
+
 }
 .button--normal{
     width: 150px;
 }
 .button--large{
-    width: 500px;
+    max-width: 500px;
+    min-width: 300px;
     font-size: 16px;
 }
 .button--green{
@@ -165,6 +176,7 @@ header{
     border-radius: 50px;
 }
 .card{
+    min-width:350px;
     border:1px solid rgba(0,0,0,0.15); 
     padding:30px;
     display: flex;
@@ -181,7 +193,7 @@ header{
     margin:40px 0px 30px 0px;
 }
 .productos{
-    margin: 0px 80px 80px 80px;
+    padding: 0px 80px 80px 80px;
     display: grid;
     grid-template-areas:    'producto1 producto2'
                             'producto3 producto4'
@@ -209,4 +221,84 @@ header{
     height: 400px;
     padding: 40px;
     border-bottom: 1px solid grey;
+}
+
+/* Sección MEDIA___________________________________________ */
+
+@media screen and (max-width:850px){
+    .menu .logo{
+        height:70px;
+        width: 150px;
+    }
+    .menu__nav a{
+        padding: 1rem 1rem; 
+        font-size: 0.7rem;
+    }
+    .footer__datos{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .columna1, .columna2,.columna3{
+        width: 100%;
+        text-align: center;
+        padding:20px;
+    }
+    .fila{
+        justify-content: center;
+    }
+    .footer__barra{
+        font-size: 0.53rem;
+    }
+    .enviobeneficios{
+        padding:60px;
+        /* display: flex; */
+        flex-direction: column;
+        padding:20px;
+    }
+    .enviobeneficios img{
+        width: 100%; 
+        padding:5px;
+    }
+    .footer__barra a{
+        padding: 5px;
+    }
+    .productos{
+
+        grid-template-areas:    'producto1' 
+                                'producto2'
+                                'producto3'
+                                'producto4'
+                                'producto5';
+    }
+}
+
+@media screen and (max-width:575px){
+
+    .hamburguesa{
+        padding-right:40px;
+        display: block;
+    }
+    .menu__central{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu__nav{
+        background-color: rgba(51, 51, 51, 0.990);
+        width: 100%;
+        position: absolute;
+        right:0;
+        top:93px;
+        display: none;
+    }
+
+    .menu__nav li{
+        width: 100%;
+    }
+    
+    .menu__nav.activado{
+        display:block;
+    }
 }
